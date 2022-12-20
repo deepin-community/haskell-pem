@@ -1,0 +1,2 @@
+version=3
+https://hackage.haskell.org/package/pem/distro-monitor .*-([0-9\.]+).(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

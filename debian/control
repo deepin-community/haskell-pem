@@ -1,0 +1,80 @@
+Source: haskell-pem
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-basement-dev,
+ libghc-basement-prof,
+ libghc-memory-dev,
+ libghc-memory-prof,
+ libghc-hunit-dev,
+ libghc-quickcheck2-dev (>= 2.4.0.1),
+ libghc-test-framework-dev (>= 0.3.3),
+ libghc-test-framework-hunit-dev,
+ libghc-test-framework-quickcheck2-dev,
+Build-Depends-Indep: ghc-doc,
+ libghc-basement-doc,
+ libghc-memory-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/vincenthz/hs-pem
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-pem
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-pem]
+
+Package: libghc-pem-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Privacy Enhanced Mail (PEM) format reader and writer${haskell:ShortBlurb}
+ It is for reading and writing PEM (Privacy Enhanced Mail; see
+ RFCs 1421 through 1424) structures.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-pem-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Privacy Enhanced Mail (PEM) format reader and writer${haskell:ShortBlurb}
+ It is for reading and writing PEM (Privacy Enhanced Mail; see
+ RFCs 1421 through 1424) structures.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-pem-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: Privacy Enhanced Mail (PEM) format reader and writer${haskell:ShortBlurb}
+ It is for reading and writing PEM (Privacy Enhanced Mail; see
+ RFCs 1421 through 1424) structures.
+ .
+ ${haskell:Blurb}
